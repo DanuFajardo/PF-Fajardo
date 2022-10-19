@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./Style/estilos.css">
+
 </head>
 <body>
     <header>
@@ -27,17 +28,35 @@
         <a href="./contacto.html" class="contacto">Contacto</a>       
     </nav>
     
-    <section class="galeria">
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="Img/Exterior.jfif" class="d-block w-100" alt="...">
+          </div> 
+        </a>
         <a href="./exterior.html" class="plantas_exterior">
-            <img src="./Img/Plantas_Exterior_img.png" alt="" class="img-fluid" >
-        </a>
-        <a href="./interior.html" class="plantas_interior">
-            <img src="./Img/plantas_interior_img.png" alt="" class="img-fluid" >
-        </a>
+          <div class="carousel-item">
+              <h2 class="carousel">PLANTAS DE EXTERIOR</h2>
+              <img src="Img/Exterior.jfif" class="d-block w-100" alt="...">
+          </div>    
         <a href="./macetas.html"  class="macetas_accesorios">
-            <img src="./Img/macetas_accesorios_img.png" alt="" class="img-fluid">
+          <div class="carousel-item">
+            <h2 class="carousel">MACETAS Y ACCESORIOS</h2>
+            <img src="Img/Accesorios.jfif" class="d-block w-100" alt="...">
+            
+          </div>
         </a>
-    </section>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    
     
     <footer>
         <div id="redes">
