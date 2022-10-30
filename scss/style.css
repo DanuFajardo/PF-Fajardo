@@ -29,7 +29,6 @@ body {
 }
 
 header {
-  background-image: url(../Img/fondo.jpg);
   background-color: rgba(203, 187, 147, 0.66);
   display: flex;
   flex-direction: row;
@@ -79,13 +78,10 @@ a {
   padding: 5px;
 }
 
-
-
 a.inicio {
   grid-area: inicio;
   box-shadow: none;
   font-family: abel;
-  
 }
 
 a.tips {
@@ -94,25 +90,11 @@ a.tips {
   font-family: abel;
 }
 
-a.tips:hover{font-weight: bold;
-  color: rgba(110, 12, 61, 1);
-  border-radius: 80%;}
-
-a.interior:hover{font-weight: bold;
-    color: rgba(110, 12, 61, 1);
-    border-radius: 80%;}  
-
-a.exterior:hover{font-weight: bold;
-    color: rgba(110, 12, 61, 1);
-    border-radius: 80%;}  
 a.contacto {
   grid-area: contacto;
   box-shadow: none;
   font-family: abel;
 }
-
-a.contacto:hover{font-weight: bold;
-  color: rgba(110, 12, 61, 1);}
 
 a.mapa {
   grid-area: mapa;
@@ -120,12 +102,8 @@ a.mapa {
   font-family: abel;
 }
 
-a.mapa:hover{font-weight: bold;
-  color: rgba(110, 12, 61, 1);
-  border-radius: 80%;}
-
 body.exterior {
-  font-family: abel;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   width: 100vw;
   height: -webkit-max-content;
   height: -moz-max-content;
@@ -176,11 +154,6 @@ body.exterior {
   animation: float 6s ease-in-out infinite;
 }
 
-.logo:hover{
-  animation: float 5s ease-in-out;
-}
-
-
 @-webkit-keyframes float {
   0% {
     box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
@@ -227,6 +200,7 @@ img.img-fluid {
   font-size: 20px;
   font-weight: 1em;
   font-family: abel;
+  padding: 2%;
 }
 
 .contenedor_carousel {
@@ -253,17 +227,6 @@ img.img-fluid {
   background-color: rgba(203, 187, 147, 0.66);
   background-size: cover;
   background-image: url(/Img/Exterior.jfif);
-  background-position: center;
-}
-
-.titulo__h1_interior {
-  padding-top: 80px;
-  text-align: center;
-  font-size: 40px;
-  color: rgb(255, 255, 255);
-  background-color: rgba(203, 187, 147, 0.66);
-  background-size: cover;
-  background-image: url(/Img/indoor.jpg);
   background-position: center;
 }
 
@@ -336,16 +299,6 @@ img.img-fluid {
   max-height: 50%;
 }
 
-/*Macetas*/
-
-.cuerpo_macetas{
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  display: flex;
-  flex-direction: row;
-  width: 100vw;
-  padding: 5%;
-}
 /*formulario*/
 .titulo__form {
   font-size: x-large;
@@ -461,7 +414,6 @@ form {
   .contenedor_foto {
     max-width: 400px;
   }
-  .descripcion{font-size: smaller;}
 }
 @media screen and (max-width: 400px) {
   .logo {
@@ -524,11 +476,12 @@ form {
   .contenedor_foto {
     max-width: 300px;
   }
-  .descripcion{font-size: smaller;}
 }
 @font-face {
   font-family: beyond;
   src: url(/fonts/beyond_the_mountains.ttf);
 }
 /*# sourceMappingURL=estilos.css.map */
-/*# sourceMappingURL=estilos.css.map *//*# sourceMappingURL=estilos.css.map */
+/*# sourceMappingURL=estilos.css.map */
+
+/*# sourceMappingURL=style.css.map */
