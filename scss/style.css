@@ -5,7 +5,6 @@ body {
   height: -moz-max-content;
   height: max-content;
   background-color: whitesmoke;
-  max-height: 100%;
   justify-items: stretch;
   display: flex;
   flex-direction: column;
@@ -23,6 +22,7 @@ header {
 header .logo {
   grid-area: logo;
   background: url(logo.png);
+  background-image: url(../Img/fondo2.jpg);
   filter: drop-shadow(0px 8px 12px rgba(0, 0, 0, 0.25));
   z-index: 2;
   margin-top: 100px;
@@ -166,14 +166,14 @@ footer {
   width: 100%;
 }
 footer #pie {
-  background-color: rgb(210, 157, 8);
+  background-color: #ffc107;
   text-align: center;
   padding: 0.5%;
   font-weight: 1rem;
   font-family: abel;
 }
 footer #redes {
-  background-color: rgba(203, 187, 147, 0.66);
+  background-color: rgba(190, 181, 25, 0.5);
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -228,31 +228,23 @@ img.img-fluid {
 }
 
 /*plantas de interior/exterior*/
-.titulo__h1 {
+.titulo, .titulo--macetas, .titulo--interior {
   padding-top: 80px;
   text-align: center;
   font-size: 40px;
   color: rgb(255, 255, 255);
   background-color: rgba(190, 181, 25, 0.5);
   background-size: cover;
-  background-image: url(/Img/Exterior.jfif);
+  background-image: url(/Img/Exterior.jpg);
   background-position: center;
   box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 15px 0px;
 }
 
-.titulo__h1_interior {
+.titulo--interior {
   background-image: url(../Img/indoor.jpg);
-  padding-top: 80px;
-  text-align: center;
-  font-size: 40px;
-  color: whitesmoke;
-  background-color: rgba(203, 187, 147, 0.66);
-  background-size: cover;
-  background-position: center;
-  box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 15px 0px;
 }
 
-.titulo_h2 {
+.titulo--iluminacion {
   display: flex;
   margin-top: 1%;
   padding-left: 50px;
@@ -261,6 +253,12 @@ img.img-fluid {
   color: rgb(29, 28, 28);
   background-color: rgba(190, 181, 25, 0.5);
   padding: 16px;
+}
+
+.titulo--macetas {
+  background-color: rgba(190, 181, 25, 0.5);
+  background-image: none;
+  box-shadow: none;
 }
 
 .contenedor_galeria {
@@ -293,14 +291,14 @@ img.img-fluid {
   font-size: 16px;
 }
 
-.galeria__image {
+.galeria__image, .galeria_macetas {
   padding: 2%;
   width: 100%;
   min-width: 250px;
   opacity: 80%;
   box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 15px 0px;
 }
-.galeria__image:hover {
+.galeria__image:hover, .galeria_macetas:hover {
   opacity: 100%;
 }
 
@@ -313,8 +311,11 @@ img.img-fluid {
 .titulo__form {
   font-size: x-large;
   text-align: center;
-  background-color: whitesmoke;
-  padding: 2%;
+  background-color: rgba(110, 12, 61, 0.7);
+  padding: 1%;
+  width: 100vw;
+  color: whitesmoke;
+  padding: 16px;
 }
 
 .mapa__ubicacion {
@@ -323,16 +324,26 @@ img.img-fluid {
   flex-direction: row;
   padding: 16px;
   background-color: whitesmoke;
+  width: fit-content;
+}
+
+.mapa {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(227, 227, 227, 0.5);
+  align-items: center;
+}
+.mapa iframe {
+  padding: 2%;
 }
 
 form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 2%;
+  padding: 3%;
 }
-
-.formulario__cuerpo1 {
+form .formulario__cuerpo1, form .formulario__cuerpo2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -342,19 +353,16 @@ form {
   border-radius: 10px;
   font-size: larger;
   width: 50%;
+  box-shadow: rgba(227, 227, 227, 0.6) 0px 5px 15px 0px;
 }
-
-.formulario__cuerpo2 {
-  display: flex;
-  flex-wrap: wrap;
+form .formulario__cuerpo1 input, form .formulario__cuerpo2 input {
+  width: 100%;
+}
+form .formulario__cuerpo2 {
   align-content: space-between;
-  justify-content: center;
   flex-direction: row;
   padding: 30px;
-  border-radius: 10px;
-  font-size: larger;
   list-style: none;
-  width: 50%;
 }
 
 .domicilio_items {
@@ -362,22 +370,33 @@ form {
 }
 
 /*macetas*/
+.cuerpo_macetas {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 5%;
+  justify-content: center;
+}
+
+.contenedor_macetas {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  padding: 3%;
+  width: fit-content;
+  align-items: center;
+}
+.contenedor_macetas .p {
+  text-align: center;
+}
+
 .galeria_macetas {
-  padding: 2%;
-  width: 100%;
-  min-width: 250px;
-  max-width: 250px;
-  opacity: 80%;
-  box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 15px 0px;
+  border-radius: 50%;
+  padding: 0;
+  max-width: 100px;
 }
 .galeria_macetas:hover {
   opacity: 100%;
-}
-
-.col-lg-4 {
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
 }
 
 /*media*/
