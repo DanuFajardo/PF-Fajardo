@@ -8,6 +8,50 @@ $step: 16px;
 $box-shadow-bottom-only: rgb(0 0 0 / 60%) 0px 5px 15px 0px;
 $box-shadow:rgb(227 227 227/ 60%) 0px 5px 15px 0px;
 
+$breakpoints: (
+  phone: 640px,
+  tablet: 768px,
+  desktop: 1024px,
+) !default;
+
+$phone-width: 600px;
+$tablet-width: 768px;
+$laptop-width: 992px;
+$desktop-width: 1024px;
+$imac-width: 1620px;
+
+@mixin xm-device {
+  @media (max-width: #{$phone-width - 1px}) {
+    @content;
+  }
+}
+@mixin phone {
+  @media (min-width: #{$phone-width}) and (max-width: #{$tablet-width - 1px}) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$laptop-width - 1px}) {
+    @content;
+  }
+}
+@mixin laptop {
+  @media (min-width: #{$laptop-width} ) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) and (max-width: #{$imac-width - 1px}) {
+    @content;
+  }
+}
+@mixin imac {
+  @media (min-width: #{$imac-width}) {
+    @content;
+  }
+}
+
+
 body {
   font-family: abel;
   width: 100vw;
@@ -28,95 +72,96 @@ header {
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  height: 200px;
-  .logo {
-    grid-area: logo;
-    background: url(logo.png);
-    background-image: url(../Img/fondo2.jpg);
-    filter: drop-shadow(0px 8px 12px rgba(0, 0, 0, 0.25));
-    z-index: 2;
-    margin-top: 100px;
-    max-width: 500px;
-    max-height: 500px;
-    display: flex;
-    padding: 20px;
-    width: 300px;
-    height: auto;
-    border-radius: 50%;
-    overflow: hidden;
-    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
-    transform: translatey(0px);
-    -webkit-animation: float 6s ease-in-out infinite;
-    animation: float 6s ease-in-out infinite;
-    @media screen and (min-width: 768px) {
-        max-width: 300px;
-        margin-top: 100px;  
+  height: 250px;
+    .logo {
+      grid-area: logo;
+      background: url(logo.png);
+      background-image: url(../Img/fondo2.jpg);
+      filter: drop-shadow(0px 8px 12px rgba(0, 0, 0, 0.25));
+      z-index: 2;
+      margin-top: 25px;
+      max-width: 250px;
+      max-height: 250px;
+      display: flex;
+      padding: $step;
+      width: 220px;
+      height: auto;
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+      transform: translatey(0px);
+      -webkit-animation: float 6s ease-in-out infinite;
+      animation: float 6s ease-in-out infinite;
+
+
+      @media screen and (max-width: 600px) {
+        min-width: 150px;
+        max-width: 200px;
+        min-height: 150px;
+        max-height: 200px;
+        margin: 2%;
+      }
+      @media screen and (max-width: 400px){
+        margin-top: $step;
+        max-width: 200px;
+        max-height: 200px;
+        padding: 5px;
+      }
+
     }
-    @media screen and (max-width: 320px) {  
-      width: 100px;
-      height: 100px;
-      max-height: 100px;
-    }
-    @media screen and (max-width: 400px){
-      margin-top: $step;
-      max-width: 200px;
-      max-height: 200px;
-      padding: 5px;
-    }
-    @media screen and (max-width: 600px) {
-      min-width: 150px;
-      max-width: 200px;
-      min-height: 150px;
-      max-height: 200px;
-      margin: 2%;
-    }
+  .busqueda {
+    border-radius: 27px;
+    border-style: solid;
+    font-size: 1rem;
+    width: 200px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: $color-secundario;
+    background-color: $color-fondo;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 1rem;
   }
-.busqueda {
-  border-radius: 27px;
-  border-style: solid;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: $color-secundario;
-  background-color: $color-fondo;
-  background-clip: padding-box;
-  border: 1px solid #ced4da;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border-radius: 1rem;
-}
-.descripcion {
-  position: relative;
-  font-style: normal;
-  font-size: 20px;
-  font-weight: 1em;
-  font-family: abel;
-  padding: 2%;
-}
-}
+  .descripcion {
+    position: relative;
+    font-style: normal;
+    font-size: $step+2;
+    font-weight: 1em;
+    width: 200px;
+    font-family: abel;
+    text-align: right;
+      strong{
+        @media screen and (max-width: 400px){
+          padding-right: 2%;
+          font-size: 14px;
+        }
+      }
+  }
+  }
+
 
 nav {
   grid-area: nav;
-  background-image: url();
   background-color: $color-principal;
-  display: grid;
-  grid-template-areas: "exterior interior logo macetas contacto";
-  grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
-  justify-items: center;
-  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
   padding: 2%;
   font-family: abel;
-  font-size: 20px;
+  font-size: $step+2;
   box-shadow: $box-shadow-bottom-only;
+
   @media screen and (max-width: 600px){
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: nowrap;
     justify-content: space-around;
     text-align: center;
     text-justify: distribute;
     box-shadow: $box-shadow-bottom-only;
+    
   }
   li {
     list-style: none;
@@ -125,10 +170,6 @@ nav {
     text-decoration: none;
     box-shadow: none;
     color: $color-secundario;
-    &:hover{
-      color: $color-fondo;
-    }
-    font-size: 20px;
     font-family: abel;
     width: auto;
     height: auto;
@@ -148,29 +189,46 @@ nav {
     }
     .contacto {
       grid-area: contacto;
+      margin-right: 0%;
+      display: flex;
+      justify-content: flex-end;
     }
-    @media screen and (max-width: 600px){
-      font-size: 15px;
-      padding: 10px;
-      text-align: center;
-    }
-  }
-}
+      &:hover{
+        color: $color-fondo;
+      }
+      @include xm-device{
+        font-size: 20px;
+      }
+      @include tablet{
+        display: flex;
+        flex-direction: column;
+      }
 
+  }
+  @media screen and (max-width: 600px){
+    font-size: 15px;
+    padding: 10px;
+    text-align: center;
+  }
+  @media screen and (max-width: 320px){
+    flex-direction: column;
+}
+}
 footer {
   grid-area: footer;
   position: relative;
   margin-top: auto;
   margin-bottom: 0px;
   width: 100%;
-  
   #pie {
     background-color:$color-principal;
     text-align: center;
     padding: 0.5%;
-    font-weight: 1rem;
+    font-weight: $step;
     font-family: abel;
-    
+      p{
+        margin:auto;
+      }
   }
   #redes {
     background-color: $color-titulos;
@@ -178,7 +236,7 @@ footer {
     justify-content: space-around;
     align-items: center;
     padding: 5px;
-    ul {
+    ul{
       margin: 0;
       padding: 0;
       li {
@@ -186,6 +244,11 @@ footer {
         padding: 5px;
         a{
         padding: 5px;
+        text-decoration: none;
+          img{
+            width: $step*2;
+            margin: $step*0.5;
+          }
         }
       }  
     } 
@@ -228,9 +291,7 @@ footer {
 }
 
 
-img.img-fluid {
-  padding: 10px;
-}
+
 
 /*plantas de interior/exterior*/
 .titulo{
@@ -251,19 +312,12 @@ img.img-fluid {
 
 .titulo--iluminacion {
   display: flex;
-  margin-top: 1%;
   padding-left: 50px;
   text-align: left;
   font-size: 35px;
   color: rgb(29, 28, 28);
   background-color: $color-titulos;
   padding: $step;
-}
-.titulo--macetas{
-  @extend .titulo;
-  background-color: $color-titulos;
-  background-image: none;
-  box-shadow: none;
 }
 
 .contenedor_galeria {
@@ -274,74 +328,71 @@ img.img-fluid {
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-column-gap: 1rem;
   grid-row-gap: 1rem;
-  margin: 1%;
-}
-
-.descripcion_galeria {
-  grid-area: descripcion_galeria;
-  font-family: abel;
-  font-size: $step+3;
-  background-image: url(/Img/FONDO2.jpg);
-}
-
-.contenedor_foto {
-  display: flex;
-  flex-direction: column;
-  background-color: beige;
-  width: auto;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  h6{
-    margin-top: 15px;
-    font-size: $step;
+  @media (max-width:1024px) and (max-width: 769px){
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
   }
+  @media (max-width:768px) and (max-width: 481px){
+    display: flex;
+    flex-direction: row;
+  }
+
+    .descripcion_galeria {
+      grid-area: descripcion_galeria;
+      font-family: abel;
+      font-size: $step+3;
+      padding: 20px;
+      background-image: url(/Img/FONDO2.jpg);
+    }
+    
+    .contenedor_foto {
+      display: flex;
+      flex-direction: column;
+      background-color: beige;
+      width: auto;
+      height: -webkit-fit-content;
+      height: -moz-fit-content;
+      height: fit-content;
+      h6{
+        margin-top: 15px;
+        font-size: $step;
+      } 
+      .galeria__image {
+        padding: 2%;
+        width: 100%;
+        opacity: 80%;
+        box-shadow: $box-shadow-bottom-only;
+        &:hover{
+          opacity: 100%;
+        }
+        @media screen and (max-width: 769px){
+          width: 325px;
+        }
+      }
+    }
 }
 
-.galeria__image {
-  padding: 2%;
-  width: 100%;
-  min-width: 250px;
-  opacity: 80%;
-  box-shadow: $box-shadow-bottom-only;
-  &:hover{
-    opacity: 100%;
-  }
-}
+
+
+
+
 .caracteristicas__plantas {
   text-align: left;
   font-size: small;
 }
 
 /*formulario*/
+
 .titulo__form {
   font-size: x-large;
   text-align: center;
   background-color: $color-3;
-  padding: 1%;
   width: 100vw;
   color:$color-fondo;
   padding: $step;
 }
-
-.mapa__ubicacion {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  padding: $step;
-  background-color: whitesmoke;
-  width: fit-content;
-}
-.mapa{
-  display: flex;
-  flex-direction: column;
-  background-color: $color-gris;
-  align-items: center;
-    iframe{
-      padding: 2%;
-    }
-}
-
 form {
   display: flex;
   flex-direction: column;
@@ -362,6 +413,10 @@ form {
       input{
         width: 100%;
       }
+      @media (max-width:480px) and (max-width:321px){
+        padding: 2%;
+        width: 100%;
+      }
   }
   .formulario__cuerpo2 {
     @extend .formulario__cuerpo1;
@@ -370,43 +425,48 @@ form {
     padding: 30px;
     list-style: none;
   }
-  
 }
-.domicilio_items {
-  padding: 2%;
+.mapa{
+  display: flex;
+  flex-direction: column;
+  background-color: $color-gris;
+  align-items: center;
+    iframe{
+      padding: 2%;
+    }
 }
 
 /*macetas*/
+.titulo--macetas{
+  @extend .titulo;
+  background-image: url(../Img/FONDO2.jpg);
+  box-shadow: none;
+  color: $color-secundario;
+}
 .cuerpo_macetas{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   padding: 5%;
   justify-content:center; 
-}
-
-.contenedor_macetas{
-  display: flex;
-  flex-direction: column;
-  justify-items: center;
-  padding: 3%;
-  width: fit-content;
-  align-items: center;
-  .p{
-    text-align: center;
+  .contenedor_macetas{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    padding: 3%;
+    width: fit-content;
+    align-items: center;
+    .galeria_macetas{
+      @extend .galeria__image;
+      border-radius: 50%;
+      padding: 0;
+      max-width: 300px;
+      &:hover{
+        opacity: 100%;
+      }
+    }
   }
 }
-.galeria_macetas{
-  @extend .galeria__image;
-  border-radius: 50%;
-  padding: 0;
-  max-width: 100px;
-  &:hover{
-    opacity: 100%;
-  }}
- 
-  
-
 
 
 /*media*/
