@@ -72,6 +72,16 @@ header .busqueda {
   appearance: none;
   border-radius: 1rem;
 }
+@media (min-width: 600px) and (max-width: 767px) {
+  header .busqueda {
+    display: none;
+  }
+}
+@media (max-width: 599px) {
+  header .busqueda {
+    display: none;
+  }
+}
 header .descripcion {
   position: relative;
   font-style: normal;
@@ -80,11 +90,14 @@ header .descripcion {
   width: 200px;
   font-family: abel;
   text-align: right;
+  margin-top: 15px;
 }
-@media screen and (max-width: 400px) {
-  header .descripcion strong {
-    padding-right: 2%;
+@media (max-width: 599px) {
+  header .descripcion {
+    font-family: abel;
     font-size: 14px;
+    text-align: right;
+    margin-right: 20px;
   }
 }
 
@@ -122,30 +135,14 @@ nav a {
   padding: 5px;
   box-shadow: none;
 }
-nav a .inicio {
-  grid-area: inicio;
-}
-nav a .exterior {
-  grid-area: exterior;
-}
-nav a .interior {
-  grid-area: interior;
-}
-nav a .macetas {
-  grid-area: macetas;
-}
-nav a .contacto {
-  grid-area: contacto;
-  margin-right: 0%;
-  display: flex;
-  justify-content: flex-end;
-}
 nav a:hover {
   color: whitesmoke;
 }
 @media (max-width: 599px) {
   nav a {
-    font-size: 20px;
+    font-family: abel;
+    font-size: 14px;
+    text-align: center;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
@@ -156,9 +153,11 @@ nav a:hover {
 }
 @media screen and (max-width: 600px) {
   nav {
-    font-size: 15px;
+    font-size: 12px;
     padding: 10px;
     text-align: center;
+    flex-direction: row;
+    align-items: center;
   }
 }
 @media screen and (max-width: 320px) {
@@ -184,12 +183,22 @@ footer #pie {
 footer #pie p {
   margin: auto;
 }
+@media (max-width: 599px) {
+  footer #pie p {
+    font-size: 12px;
+  }
+}
 footer #redes {
   background-color: rgba(190, 181, 25, 0.5);
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding: 5px;
+}
+@media (max-width: 599px) {
+  footer #redes {
+    padding: 0%;
+  }
 }
 footer #redes ul {
   margin: 0;
@@ -206,6 +215,12 @@ footer #redes ul li a {
 footer #redes ul li a img {
   width: 32px;
   margin: 8px;
+}
+@media (max-width: 599px) {
+  footer #redes ul li a img {
+    padding: 0%;
+    width: 20px;
+  }
 }
 
 .carousel {
@@ -252,6 +267,12 @@ footer #redes ul li a img {
   background-position: center;
   box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 15px 0px;
 }
+@media (max-width: 599px) {
+  .titulo, .titulo--macetas, .titulo--interior {
+    padding: 20px;
+    color: whitesmoke;
+  }
+}
 
 .titulo--interior {
   background-image: url(../Img/indoor.jpg);
@@ -265,6 +286,13 @@ footer #redes ul li a img {
   color: rgb(29, 28, 28);
   background-color: rgba(190, 181, 25, 0.5);
   padding: 16px;
+}
+@media (max-width: 599px) {
+  .titulo--iluminacion {
+    font-size: 25.6px;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
 }
 
 .contenedor_galeria {
@@ -288,12 +316,23 @@ footer #redes ul li a img {
     flex-direction: row;
   }
 }
+@media (min-width: 1024px) and (max-width: 1619px) {
+  .contenedor_galeria {
+    margin-left: 10px;
+    margin-right: 25px;
+  }
+}
 .contenedor_galeria .descripcion_galeria {
   grid-area: descripcion_galeria;
   font-family: abel;
   font-size: 19px;
   padding: 20px;
   background-image: url(/Img/FONDO2.jpg);
+}
+@media (max-width: 599px) {
+  .contenedor_galeria .descripcion_galeria {
+    font-size: 16px;
+  }
 }
 .contenedor_galeria .contenedor_foto {
   display: flex;
@@ -304,22 +343,26 @@ footer #redes ul li a img {
   height: -moz-fit-content;
   height: fit-content;
 }
-.contenedor_galeria .contenedor_foto h6 {
-  margin-top: 15px;
-  font-size: 16px;
+@media (max-width: 599px) {
+  .contenedor_galeria .contenedor_foto {
+    width: 95vw;
+    align-items: center;
+  }
 }
 .contenedor_galeria .contenedor_foto .galeria__image, .contenedor_galeria .contenedor_foto .cuerpo_macetas .contenedor_macetas .galeria_macetas, .cuerpo_macetas .contenedor_macetas .contenedor_galeria .contenedor_foto .galeria_macetas {
   padding: 2%;
   width: 100%;
   opacity: 80%;
   box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 15px 0px;
+  margin-bottom: 15px;
 }
 .contenedor_galeria .contenedor_foto .galeria__image:hover, .contenedor_galeria .contenedor_foto .cuerpo_macetas .contenedor_macetas .galeria_macetas:hover, .cuerpo_macetas .contenedor_macetas .contenedor_galeria .contenedor_foto .galeria_macetas:hover {
   opacity: 100%;
 }
 @media screen and (max-width: 769px) {
   .contenedor_galeria .contenedor_foto .galeria__image, .contenedor_galeria .contenedor_foto .cuerpo_macetas .contenedor_macetas .galeria_macetas, .cuerpo_macetas .contenedor_macetas .contenedor_galeria .contenedor_foto .galeria_macetas {
-    width: 325px;
+    width: 100%;
+    max-width: 300px;
   }
 }
 
@@ -359,13 +402,19 @@ form .formulario__cuerpo1, form .formulario__cuerpo2 {
 form .formulario__cuerpo1 input, form .formulario__cuerpo2 input {
   width: 100%;
 }
-@media (max-width: 480px) and (max-width: 321px) {
+@media (max-width: 599px) {
   form .formulario__cuerpo1, form .formulario__cuerpo2 {
-    padding: 2%;
     width: 100%;
+    font-size: 14px;
   }
 }
-form .formulario__cuerpo2 {
+@media (min-width: 768px) and (max-width: 991px) {
+  form .formulario__cuerpo1, form .formulario__cuerpo2 {
+    width: 75%;
+  }
+}
+
+.formulario__cuerpo2 {
   align-content: space-between;
   flex-direction: row;
   padding: 30px;
@@ -380,6 +429,11 @@ form .formulario__cuerpo2 {
 }
 .mapa iframe {
   padding: 2%;
+}
+@media (max-width: 599px) {
+  .mapa iframe {
+    max-width: 95vw;
+  }
 }
 
 /*macetas*/
@@ -414,40 +468,34 @@ form .formulario__cuerpo2 {
 }
 
 /*media*/
-@media screen and (max-width: 600px) {
+/*@media screen and (max-width: 600px) {
   .busqueda {
     display: none;
+    @media screen and (min-width: 768px) {
+      max-width: 200px;
+    }
   }
-}
-@media screen and (max-width: 600px) and (min-width: 768px) {
-  .busqueda {
-    max-width: 200px;
-  }
-}
-@media screen and (max-width: 600px) {
   .contenedor_galeria {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 20px;
   }
-}
-@media screen and (max-width: 600px) {
   .contenedor_foto {
     max-width: 400px;
   }
-}
-@media screen and (max-width: 400px) {
+}*/
+/*@media screen and (max-width: 400px) {
   .descripcion {
-    font-size: 16px;
+    font-size: $step;
     margin-top: 15px;
   }
   .descripcion_galeria {
-    font-size: 16px;
+    font-size: $step;
   }
   .mapa .interior .exterior .tips {
     max-width: 20px;
-    font-size: 16px;
+    font-size: $step;
   }
   .busqueda {
     display: none;
@@ -467,6 +515,7 @@ form .formulario__cuerpo2 {
     max-width: 20px;
     font-size: 12px;
   }
+
   .busqueda {
     display: none;
   }
@@ -480,10 +529,7 @@ form .formulario__cuerpo2 {
     max-width: 300px;
   }
 }
-@font-face {
-  font-family: beyond;
-  src: url(/fonts/beyond_the_mountains.ttf);
-}
+
 /*# sourceMappingURL=estilos.css.map */
 /*# sourceMappingURL=estilos.css.map */
 
