@@ -1,3 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  border-color: #e2e8f0;
+}
+
 body {
   font-family: abel;
   width: 100vw;
@@ -94,10 +108,7 @@ header .descripcion {
 }
 @media (max-width: 599px) {
   header .descripcion {
-    font-family: abel;
-    font-size: 14px;
-    text-align: right;
-    margin-right: 20px;
+    display: none;
   }
 }
 
@@ -137,6 +148,9 @@ nav a {
 }
 nav a:hover {
   color: whitesmoke;
+}
+nav a:active {
+  color: rgba(227, 227, 227, 0.5);
 }
 @media (max-width: 599px) {
   nav a {
@@ -223,8 +237,13 @@ footer #redes ul li a img {
   }
 }
 
-.carousel {
+.carousel_horizontal {
   padding: 2%;
+}
+@media (max-width: 600px) and (max-width: 1px) {
+  .carousel_horizontal {
+    display: none;
+  }
 }
 
 @-webkit-keyframes float {
@@ -263,7 +282,7 @@ footer #redes ul li a img {
   color: rgb(255, 255, 255);
   background-color: rgba(190, 181, 25, 0.5);
   background-size: cover;
-  background-image: url(/Img/Exterior.jpg);
+  background-image: url(/Img/Exterior0.jpg);
   background-position: center;
   box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 15px 0px;
 }
@@ -317,6 +336,18 @@ footer #redes ul li a img {
   }
 }
 @media (min-width: 1024px) and (max-width: 1619px) {
+  .contenedor_galeria {
+    margin-left: 10px;
+    margin-right: 25px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1023px) {
+  .contenedor_galeria {
+    margin-left: 10px;
+    margin-right: 25px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
   .contenedor_galeria {
     margin-left: 10px;
     margin-right: 25px;
@@ -454,83 +485,27 @@ form .formulario__cuerpo1 input, form .formulario__cuerpo2 input {
   display: flex;
   flex-direction: column;
   justify-items: center;
-  padding: 3%;
+  padding: 2%;
   width: fit-content;
   align-items: center;
+  max-width: 300px;
 }
 .cuerpo_macetas .contenedor_macetas .galeria_macetas {
   border-radius: 50%;
-  padding: 0;
-  max-width: 300px;
+  padding: 2%;
+  max-width: 100%;
 }
 .cuerpo_macetas .contenedor_macetas .galeria_macetas:hover {
-  opacity: 100%;
+  opacity: 50%;
 }
-
-/*media*/
-/*@media screen and (max-width: 600px) {
-  .busqueda {
-    display: none;
-    @media screen and (min-width: 768px) {
-      max-width: 200px;
-    }
-  }
-  .contenedor_galeria {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  .contenedor_foto {
-    max-width: 400px;
-  }
-}*/
-/*@media screen and (max-width: 400px) {
-  .descripcion {
-    font-size: $step;
-    margin-top: 15px;
-  }
-  .descripcion_galeria {
-    font-size: $step;
-  }
-  .mapa .interior .exterior .tips {
-    max-width: 20px;
-    font-size: $step;
-  }
-  .busqueda {
-    display: none;
-  }
-  .contenedor_galeria {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  .contenedor_foto {
-    max-width: 300px;
+@media (max-width: 599px) {
+  .cuerpo_macetas .contenedor_macetas .galeria_macetas:hover {
+    width: 100%;
   }
 }
-@media screen and (max-width: 320px) {
-  .mapa .interior .exterior .contacto {
-    max-width: 20px;
-    font-size: 12px;
-  }
-
-  .busqueda {
-    display: none;
-  }
-  .contenedor_galeria {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  .contenedor_foto {
-    max-width: 300px;
-  }
+.cuerpo_macetas .contenedor_macetas p {
+  width: 50%;
+  text-align: center;
 }
-
-/*# sourceMappingURL=estilos.css.map */
-/*# sourceMappingURL=estilos.css.map */
 
 /*# sourceMappingURL=style.css.map */
