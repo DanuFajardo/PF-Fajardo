@@ -278,11 +278,12 @@ footer #redes ul li a img {
 .titulo, .titulo--macetas, .titulo--interior {
   padding-top: 80px;
   text-align: center;
-  font-size: 40px;
+  font-size: 70px;
+  font-weight: bold;
   color: rgb(255, 255, 255);
   background-color: rgba(190, 181, 25, 0.5);
   background-size: cover;
-  background-image: url(/Img/Exterior0.jpg);
+  background-image: url(../Img/Exterior0.jpg);
   background-position: center;
   box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 15px 0px;
 }
@@ -290,6 +291,7 @@ footer #redes ul li a img {
   .titulo, .titulo--macetas, .titulo--interior {
     padding: 20px;
     color: whitesmoke;
+    font-size: 50px;
   }
 }
 
@@ -353,6 +355,11 @@ footer #redes ul li a img {
     margin-right: 25px;
   }
 }
+@media (max-width: 599px) {
+  .contenedor_galeria {
+    align-items: center;
+  }
+}
 .contenedor_galeria .descripcion_galeria {
   grid-area: descripcion_galeria;
   font-family: abel;
@@ -369,37 +376,37 @@ footer #redes ul li a img {
   display: flex;
   flex-direction: column;
   background-color: beige;
-  width: auto;
+  width: fit-content;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
 }
 @media (max-width: 599px) {
   .contenedor_galeria .contenedor_foto {
-    width: 95vw;
+    width: 100%;
+    max-width: 400px;
+    display: flex;
     align-items: center;
   }
 }
-.contenedor_galeria .contenedor_foto .galeria__image, .contenedor_galeria .contenedor_foto .cuerpo_macetas .contenedor_macetas .galeria_macetas, .cuerpo_macetas .contenedor_macetas .contenedor_galeria .contenedor_foto .galeria_macetas {
+.contenedor_galeria .contenedor_foto p {
+  text-align: center;
+}
+.contenedor_galeria .galeria__image, .contenedor_galeria .cuerpo_macetas .contenedor_macetas .galeria_macetas, .cuerpo_macetas .contenedor_macetas .contenedor_galeria .galeria_macetas {
   padding: 2%;
   width: 100%;
   opacity: 80%;
   box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 15px 0px;
   margin-bottom: 15px;
 }
-.contenedor_galeria .contenedor_foto .galeria__image:hover, .contenedor_galeria .contenedor_foto .cuerpo_macetas .contenedor_macetas .galeria_macetas:hover, .cuerpo_macetas .contenedor_macetas .contenedor_galeria .contenedor_foto .galeria_macetas:hover {
+.contenedor_galeria .galeria__image:hover, .contenedor_galeria .cuerpo_macetas .contenedor_macetas .galeria_macetas:hover, .cuerpo_macetas .contenedor_macetas .contenedor_galeria .galeria_macetas:hover {
   opacity: 100%;
 }
 @media screen and (max-width: 769px) {
-  .contenedor_galeria .contenedor_foto .galeria__image, .contenedor_galeria .contenedor_foto .cuerpo_macetas .contenedor_macetas .galeria_macetas, .cuerpo_macetas .contenedor_macetas .contenedor_galeria .contenedor_foto .galeria_macetas {
+  .contenedor_galeria .galeria__image, .contenedor_galeria .cuerpo_macetas .contenedor_macetas .galeria_macetas, .cuerpo_macetas .contenedor_macetas .contenedor_galeria .galeria_macetas {
     width: 100%;
     max-width: 300px;
   }
-}
-
-.caracteristicas__plantas {
-  text-align: left;
-  font-size: small;
 }
 
 /*formulario*/
@@ -450,6 +457,23 @@ form .formulario__cuerpo1 input, form .formulario__cuerpo2 input {
   flex-direction: row;
   padding: 30px;
   list-style: none;
+}
+
+.boton {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  height: fit-content;
+  font-style: bold;
+  font-family: abel;
+  background-color: rgba(227, 227, 227, 0.5);
+  border: none;
+  cursor: pointer;
+}
+.boton input {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 20px;
 }
 
 .mapa {
