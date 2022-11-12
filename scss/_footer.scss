@@ -1,0 +1,60 @@
+footer {
+    grid-area: footer;
+    position: relative;
+    margin-top: auto;
+    margin-bottom: 0px;
+    width: 100%;
+  
+    #pie {
+      background-color: $color-principal;
+      text-align: center;
+      padding: 0.5%;
+      font-weight: $step;
+      font-family: abel;
+  
+      p {
+        margin: auto;
+  
+        @include xm-device {
+          font-size: 12px;
+        }
+      }
+    }
+  
+    #redes {
+      background-color: $color-titulos;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 5px;
+  
+      @include xm-device {
+        padding: 0%;
+      }
+  
+      ul {
+        margin: 0;
+        padding: 0;
+  
+        li {
+          list-style: none;
+          padding: 5px;
+  
+          a {
+            padding: 5px;
+            text-decoration: none;
+  
+            img {
+              width: $step * 2;
+              margin: $step * 0.5;
+  
+              @include xm-device {
+                padding: 0%;
+                width: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }

@@ -1,0 +1,66 @@
+nav {
+    grid-area: nav;
+    background-color: $color-principal;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2%;
+    font-family: abel;
+    font-size: $step + 2;
+    box-shadow: $box-shadow-bottom-only;
+
+    @media screen and (max-width: 600px) {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        text-align: center;
+        text-justify: distribute;
+        box-shadow: $box-shadow-bottom-only;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+        box-shadow: none;
+        color: $color-secundario;
+        font-family: abel;
+        width: auto;
+        height: auto;
+        padding: 5px;
+        box-shadow: none;
+
+        &:hover {
+            color: $color-fondo;
+        }
+
+        &:active {
+            color: $color-gris;
+        }
+
+        @include xm-device {
+            font-family: abel;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        @include tablet {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        font-size: 12px;
+        padding: 10px;
+        text-align: center;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    @media screen and (max-width: 320px) {
+        flex-direction: column;
+    }
+}
