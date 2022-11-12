@@ -189,6 +189,11 @@ body {
   }
 }
 
+.plantitas {
+  padding: 2%;
+  max-width: 100vw;
+}
+
 .titulo, .titulo--macetas, .titulo--interior {
   padding-top: 80px;
   text-align: center;
@@ -319,7 +324,7 @@ form .formulario__cuerpo1 input, form .formulario__cuerpo2 input {
 
 .contenedor_galeria {
   display: grid;
-  grid-template-areas: "descripcion_galeria contenedor_foto contenedor_foto" "descripcion_galeria contenedor_foto contenedor_foto" "descripcion_galeria contenedor_foto contenedor_foto";
+  grid-template-areas: "descripcion_galeria contenedor_foto contenedor_foto" "descripcion_galeria contenedor_foto contenedor_foto" "descripcion_galeria contenedor_foto contenedor_foto" "descripcion_galeria contenedor_foto contenedor_foto";
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-column-gap: 1rem;
   grid-row-gap: 1rem;
@@ -532,8 +537,5 @@ footer #redes ul li a img {
     transform: translatey(0px);
   }
 }
-/*plantas de interior/exterior*/
-/*formulario*/
-/*macetas*/
 
 /*# sourceMappingURL=style.css.map */

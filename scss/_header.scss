@@ -8,81 +8,80 @@ header {
     align-items: center;
     justify-content: space-evenly;
     height: 250px;
-  
+
     .logo {
-      grid-area: logo;
-      background: url(logo.png);
-      background-image: url(../Img/fondo2.jpg);
-      filter: drop-shadow(0px 8px 12px rgba(0, 0, 0, 0.25)
-      );
-    z-index: 2;
-    margin-top: 25px;
-    max-width: 250px;
-    max-height: 250px;
-    display: flex;
-    padding: $step;
-    width: 220px;
-    height: auto;
-    border-radius: 50%;
-    overflow: hidden;
-    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
-    transform: translatey(0px);
-    -webkit-animation: float 6s ease-in-out infinite;
-    animation: float 6s ease-in-out infinite;
-  
-    @media screen and (max-width: 600px) {
-      min-width: 150px;
-      max-width: 200px;
-      min-height: 150px;
-      max-height: 200px;
-      margin: 2%;
+        grid-area: logo;
+        background: url(logo.png);
+        background-image: url(../Img/fondo2.jpg);
+        filter: drop-shadow(0px 8px 12px rgba(0, 0, 0, 0.25));
+        z-index: 2;
+        margin-top: 25px;
+        max-width: 250px;
+        max-height: 250px;
+        display: flex;
+        padding: $step;
+        width: 220px;
+        height: auto;
+        border-radius: 50%;
+        overflow: hidden;
+        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+        transform: translatey(0px);
+        -webkit-animation: float 6s ease-in-out infinite;
+        animation: float 6s ease-in-out infinite;
+
+        @media screen and (max-width: 600px) {
+            min-width: 150px;
+            max-width: 200px;
+            min-height: 150px;
+            max-height: 200px;
+            margin: 2%;
+        }
+
+        @media screen and (max-width: 400px) {
+            margin-top: $step;
+            max-width: 200px;
+            max-height: 200px;
+            padding: 5px;
+        }
     }
-  
-    @media screen and (max-width: 400px) {
-      margin-top: $step;
-      max-width: 200px;
-      max-height: 200px;
-      padding: 5px;
+
+    .busqueda {
+        border-radius: 27px;
+        border-style: solid;
+        font-size: 1rem;
+        width: 200px;
+        font-weight: 400;
+        line-height: 1.5;
+        color: $color-secundario;
+        background-color: $color-fondo;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border-radius: 1rem;
+
+        @include phone {
+            display: none;
+        }
+
+        @include xm-device {
+            display: none;
+        }
     }
-  }
-  
-  .busqueda {
-    border-radius: 27px;
-    border-style: solid;
-    font-size: 1rem;
-    width: 200px;
-    font-weight: 400;
-    line-height: 1.5;
-    color: $color-secundario;
-    background-color: $color-fondo;
-    background-clip: padding-box;
-    border: 1px solid #ced4da;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    border-radius: 1rem;
-  
-    @include phone {
-      display: none;
+
+    .descripcion {
+        position: relative;
+        font-style: normal;
+        font-size: $step + 2;
+        font-weight: 1em;
+        width: 200px;
+        font-family: abel;
+        text-align: right;
+        margin-top: 15px;
+
+        @include xm-device {
+            display: none;
+        }
     }
-  
-    @include xm-device {
-      display: none;
-    }
-  }
-  
-  .descripcion {
-    position: relative;
-    font-style: normal;
-    font-size: $step + 2;
-    font-weight: 1em;
-    width: 200px;
-    font-family: abel;
-    text-align: right;
-    margin-top: 15px;
-  
-    @include xm-device {
-      display: none;
-    }
-  }
-  }
+}
