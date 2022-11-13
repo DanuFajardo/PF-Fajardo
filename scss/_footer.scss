@@ -41,18 +41,19 @@ footer {
                 padding: 5px;
 
                 a {
+                    
                     padding: 5px;
                     text-decoration: none;
-
-                    img {
-                        width: $step * 2;
-                        margin: $step * 0.5;
-
-                        @include xm-device {
-                            padding: 0%;
-                            width: 20px;
+                    color:$color-3;
+                        &:hover{
+                            color: $color-secundario;
                         }
+
+                    @include xm-device {
+                        padding: 0%;
+                        width: 20px;
                     }
+                    
                 }
             }
         }
