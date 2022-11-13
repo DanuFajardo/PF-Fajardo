@@ -10,10 +10,11 @@
     background-position: center;
     box-shadow: $box-shadow-bottom-only;
     text-shadow: 2px 3px grey;
+
     .text-pop-up-top {
         -webkit-animation: text-pop-up-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-                animation: text-pop-up-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-        }
+        animation: text-pop-up-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    }
 
     @include xm-device {
         padding: 20px;
@@ -25,7 +26,7 @@
 .titulo--interior {
     @extend .titulo;
     background-image: url(../img/indoor.jpg);
-    
+
 }
 
 .titulo--iluminacion {
@@ -93,21 +94,24 @@ form {
     flex-direction: row;
     padding: 30px;
     list-style: none;
-    
-    .domicilio_items{
+
+    .domicilio_items {
         display: flex;
-        span{
+
+        span {
             text-align: center;
         }
-        input{
+
+        input {
 
             width: 2vw;
             height: auto;
             padding: 0;
-            margin:10px;
-            vertical-align:auto;
+            margin: 10px;
+            vertical-align: auto;
             position: relative
         }
+
         @include xm-device {
             flex-direction: row;
         }
@@ -130,8 +134,8 @@ form {
         font-weight: 500;
         font-size: 20px;
         display: block;
-    padding-left: 15px;
-    text-indent: -15px;
+        padding-left: 15px;
+        text-indent: -15px;
     }
 }
 
@@ -155,9 +159,10 @@ form {
     background-image: url(../img/fondo-2.jpg);
     box-shadow: none;
     color: $color-fondo;
+
     .text-pop-up-top {
         -webkit-animation: text-pop-up-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-                animation: text-pop-up-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        animation: text-pop-up-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     }
 }
 
@@ -172,6 +177,7 @@ form {
     grid-column-gap: 1rem;
     grid-row-gap: 1rem;
     margin-bottom: 2%;
+
     @media (max-width: 1024px) and (max-width: 769px) {
         display: flex;
         flex-wrap: wrap;
@@ -221,40 +227,48 @@ form {
         background-color: beige;
         width: fit-content;
 
-            @include xm-device {
-                width: 90%;
-                max-width: 400px;
-                display: flex;
-                align-items: center;
-            }
-    
+        @include xm-device {
+            width: 90%;
+            max-width: 400px;
+            display: flex;
+            align-items: center;
+
+        }
+
         .descripcion {
             text-align: left;
             margin: 2%;
 
-                @include xm-device{
-                    text-align: left;
-                    width: inherit;
+            @include xm-device {
+                text-align: left;
+                width: inherit;
+                font-size: medium;
+                margin-left: 60px;
+            }
+
+            strong {
+                margin: 1%;
+            }
+
+            i {
+                color: $color-3;
+
+                &:hover {
+                    color: $color-principal;
                 }
-                strong{
-                    margin: 1%;
-                }
-                i{
-                    color: $color-3;
-                        &:hover {
-                            color: $color-principal;
-                        }
-                }
-                .cursiva{
-                    
-                    font-style: italic;
-                }
-                
+            }
+
+            .cursiva {
+
+                font-style: italic;
+            }
+
         }
+
         h3 {
             text-align: center;
         }
-    
+
         .galeria__image {
             padding: 2%;
             width: 100%;
@@ -270,8 +284,8 @@ form {
                 width: 100%;
                 max-width: 300px;
             }
+        }
     }
-}
 }
 
 .cuerpo_macetas {
@@ -289,6 +303,7 @@ form {
         width: fit-content;
         align-items: center;
         max-width: 300px;
+
         .galeria_macetas {
             @extend .galeria__image;
             border-radius: 50%;
@@ -303,7 +318,6 @@ form {
                 }
             }
         }
-
         p {
             width: 50%;
             text-align: center;

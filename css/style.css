@@ -424,6 +424,8 @@ form .formulario__cuerpo1 input, form .formulario__cuerpo2 input {
   .contenedor_galeria .contenedor_foto .descripcion {
     text-align: left;
     width: inherit;
+    font-size: medium;
+    margin-left: 60px;
   }
 }
 .contenedor_galeria .contenedor_foto .descripcion strong {
