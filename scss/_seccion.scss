@@ -9,6 +9,7 @@
     background-image: url(../Img/Exterior0.jpg);
     background-position: center;
     box-shadow: $box-shadow-bottom-only;
+    text-shadow: 2px 3px grey;
 
     @include xm-device {
         padding: 20px;
@@ -19,7 +20,8 @@
 
 .titulo--interior {
     @extend .titulo;
-    background-image: url(../Img/indoor.jpg);
+    background-image: url(../img/indoor.jpg);
+    
 }
 
 .titulo--iluminacion {
@@ -42,9 +44,9 @@
     font-size: x-large;
     text-align: center;
     background-color: $color-3;
-    width: 100vw;
     color: $color-fondo;
     padding: $step;
+    width: 100vw;
 }
 
 
@@ -87,6 +89,25 @@ form {
     flex-direction: row;
     padding: 30px;
     list-style: none;
+    
+    .domicilio_items{
+        display: flex;
+        span{
+            text-align: center;
+        }
+        input{
+
+            width: 2vw;
+            height: auto;
+            padding: 0;
+            margin:10px;
+            vertical-align:auto;
+            position: relative
+        }
+        @include xm-device {
+            flex-direction: row;
+        }
+    }
 }
 
 .boton {
@@ -104,6 +125,9 @@ form {
         text-transform: uppercase;
         font-weight: 500;
         font-size: 20px;
+        display: block;
+    padding-left: 15px;
+    text-indent: -15px;
     }
 }
 
@@ -124,9 +148,9 @@ form {
 
 .titulo--macetas {
     @extend .titulo;
-    background-image: url(../Img/FONDO2.jpg);
+    background-image: url(../img/fondo-2.jpg);
     box-shadow: none;
-    color: $color-secundario;
+    color: $color-fondo;
 }
 
 .contenedor_galeria {
@@ -176,7 +200,7 @@ form {
         font-family: abel;
         font-size: $step + 3;
         padding: 20px;
-        background-image: url(/Img/FONDO2.jpg);
+        background-image: url(../img/fondo-2.jpg);
 
         @include xm-device {
             font-size: $step;
@@ -188,9 +212,7 @@ form {
         flex-direction: column;
         background-color: beige;
         width: fit-content;
-        height: -webkit-fit-content;
-        height: -moz-fit-content;
-        height: fit-content;
+
 
         @include xm-device {
             width: 100%;
@@ -200,33 +222,33 @@ form {
         }
 
         p {
-            text-align: center;
+            text-align: left;
+            @include xm-device {
+                text-align: center;
         }
-
+    }
         h3 {
             text-align: center;
         }
-    }
-
-
-    .galeria__image {
-        padding: 2%;
-        width: 100%;
-        opacity: 80%;
-        box-shadow: $box-shadow-bottom-only;
-        margin-bottom: 15px;
-
-        &:hover {
-            opacity: 100%;
-        }
-
-        @media screen and (max-width: 769px) {
+    
+        .galeria__image {
+            padding: 2%;
             width: 100%;
-            max-width: 300px;
-        }
+            opacity: 80%;
+            box-shadow: $box-shadow-bottom-only;
+            margin-bottom: 15px;
+
+            &:hover {
+                opacity: 100%;
+            }
+
+            @media screen and (max-width: 769px) {
+                width: 100%;
+                max-width: 300px;
+            }
     }
 }
-
+}
 
 .cuerpo_macetas {
     display: flex;
