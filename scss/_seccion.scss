@@ -1,3 +1,18 @@
+@mixin formularios {
+    @include xm-device {
+        width: 95%;
+        font-size: 14px;
+    }
+
+    @include tablet {
+        width: 75%;
+    }
+
+    @include phone {
+        width: 75%;
+    }
+}
+
 .titulo {
     padding-top: 80px;
     text-align: center;
@@ -73,18 +88,19 @@ form {
         width: 50%;
         box-shadow: $box-shadow;
 
+        label {
+            align-self: baseline;
+        }
+
         input {
             width: 100%;
         }
 
-        @include xm-device {
-            width: 100%;
-            font-size: 14px;
+        span {
+            align-self: center;
         }
 
-        @include tablet {
-            width: 75%;
-        }
+        @include formularios;
     }
 }
 
@@ -111,10 +127,6 @@ form {
             vertical-align: auto;
             position: relative
         }
-
-        @include xm-device {
-            flex-direction: row;
-        }
     }
 }
 
@@ -137,6 +149,7 @@ form {
         padding-left: 15px;
         text-indent: -15px;
     }
+    @include formularios;
 }
 
 .mapa {
@@ -148,8 +161,20 @@ form {
     iframe {
         padding: 2%;
 
+        @include desktop {
+            width: 75%;
+        }
+
+        @include phone {
+            width: 75%;
+        }
+
         @include xm-device {
             max-width: 95vw;
+        }
+
+        @include tablet {
+            width: 75%;
         }
     }
 }
@@ -244,6 +269,7 @@ form {
                 width: inherit;
                 font-size: medium;
                 margin-left: 60px;
+                margin-bottom: 5%;
             }
 
             strong {
@@ -276,9 +302,10 @@ form {
             box-shadow: $box-shadow-bottom-only;
             margin-bottom: 15px;
             align-self: center;
-                &:hover {
-                    opacity: 100%;
-                }
+
+            &:hover {
+                opacity: 100%;
+            }
 
             @media screen and (max-width: 769px) {
                 width: 100%;
@@ -318,6 +345,7 @@ form {
                 }
             }
         }
+
         p {
             width: 50%;
             text-align: center;

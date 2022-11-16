@@ -33,24 +33,28 @@ footer {
         }
 
         ul {
+            display: flex;
             margin: 0;
             padding: 0;
 
             li {
                 list-style: none;
                 padding: 5px;
+                display: flex;
 
                 a {
                     
                     padding: 5px;
                     text-decoration: none;
                     color:$color-3;
+                    margin: 0 15px;
+                    scale: 1.2;
                         &:hover{
                             color: $color-secundario;
                         }
 
                     @include xm-device {
-                        padding: 0%;
+                        padding: 5%;
                         width: 20px;
                     }
                     
