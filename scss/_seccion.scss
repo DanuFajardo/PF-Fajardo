@@ -18,13 +18,13 @@
     text-align: center;
     font-size: 70px;
     font-weight: bold;
-    color: rgb(255, 255, 255);
+    color: $color-fondo;
     background-color: $color-titulos;
     background-size: cover;
     background-image: url(../img/Exterior0.jpg);
     background-position: center;
     box-shadow: $box-shadow-bottom-only;
-    text-shadow: 2px 3px grey;
+    text-shadow: 0px 15px 15px  rgb(0 0 0 / 50%) ;
 
     .text-pop-up-top {
         -webkit-animation: text-pop-up-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
@@ -47,7 +47,7 @@
 .titulo--iluminacion {
     display: flex;
     padding-left: 50px;
-    text-align: left;
+    justify-content: center;
     font-size: 35px;
     color: rgb(29, 28, 28);
     background-color: $color-titulos;
@@ -184,6 +184,7 @@ form {
     background-image: url(../img/fondo-2.jpg);
     box-shadow: none;
     color: $color-fondo;
+
 
     .text-pop-up-top {
         -webkit-animation: text-pop-up-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
@@ -352,3 +353,4 @@ form {
         }
     }
 }
+
