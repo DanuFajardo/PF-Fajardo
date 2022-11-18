@@ -112,20 +112,13 @@ form {
 
     iframe {
         padding: 2%;
-
-        @include desktop {
-            width: 75%;
-        }
-
-        @include phone {
-            width: 75%;
-        }
+        width: 75%;
 
         @include xm-device {
             max-width: 95vw;
         }
 
-        @include tablet {
+        @include imac {
             width: 75%;
         }
     }

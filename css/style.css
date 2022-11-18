@@ -128,8 +128,13 @@ nav a:active {
 @media (max-width: 599px) {
   nav a {
     font-family: abel;
-    font-size: 14px;
+    font-size: 10px;
     text-align: center;
+  }
+}
+@media (min-width: 600px) and (max-width: 767px) {
+  nav a {
+    font-size: 12px;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
@@ -140,7 +145,7 @@ nav a:active {
 }
 @media screen and (max-width: 600px) {
   nav {
-    font-size: 12px;
+    font-size: 10px;
     padding: 10px;
     text-align: center;
     flex-direction: row;
@@ -303,6 +308,11 @@ footer #redes ul li a:hover {
 @media (max-width: 599px) {
   .cards-grid {
     flex-wrap: wrap;
+  }
+}
+@media (min-width: 1620px) {
+  .cards-grid {
+    max-width: 1200px;
   }
 }
 
@@ -507,23 +517,14 @@ form .formulario__cuerpo1 span, form .formulario__cuerpo2 span {
 }
 .mapa iframe {
   padding: 2%;
-}
-@media (min-width: 1024px) and (max-width: 1619px) {
-  .mapa iframe {
-    width: 75%;
-  }
-}
-@media (min-width: 600px) and (max-width: 767px) {
-  .mapa iframe {
-    width: 75%;
-  }
+  width: 75%;
 }
 @media (max-width: 599px) {
   .mapa iframe {
     max-width: 95vw;
   }
 }
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 1620px) {
   .mapa iframe {
     width: 75%;
   }
@@ -691,10 +692,10 @@ form .formulario__cuerpo1 span, form .formulario__cuerpo2 span {
   text-align: center;
   font-size: 70px;
   font-weight: bold;
+  background-image: url(../img/exterior.jpg);
   color: whitesmoke;
   background-color: rgba(190, 181, 25, 0.5);
   background-size: cover;
-  background-image: url(../img/Exterior0.jpg);
   background-position: center;
   box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 15px 0px;
   text-shadow: 0px 15px 15px rgba(0, 0, 0, 0.5);

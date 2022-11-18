@@ -42,8 +42,11 @@ nav {
 
         @include xm-device {
             font-family: abel;
-            font-size: 14px;
+            font-size: 10px;
             text-align: center;
+        }
+        @include phone {
+            font-size: 12px;
         }
 
         @include tablet {
@@ -53,7 +56,7 @@ nav {
     }
 
     @media screen and (max-width: 600px) {
-        font-size: 12px;
+        font-size: 10px;
         padding: 10px;
         text-align: center;
         flex-direction: row;

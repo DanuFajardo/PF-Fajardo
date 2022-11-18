@@ -3,13 +3,13 @@
     text-align: center;
     font-size: 70px;
     font-weight: bold;
+    background-image: url(../img/exterior.jpg);
     color: $color-fondo;
     background-color: $color-titulos;
     background-size: cover;
     background-position: center;
     box-shadow: $box-shadow-bottom-only;
     text-shadow: $sombra-titulo;
-    background-image: url(../img/exterior0.jpg);
 
     .text-pop-up-top {
         -webkit-animation: $animacion-titulos;

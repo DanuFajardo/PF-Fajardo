@@ -9,6 +9,9 @@
   @include xm-device {
     flex-wrap: wrap;
   }
+  @include imac{
+    max-width: 1200px;
+}
 }
 
 .flip-card {
