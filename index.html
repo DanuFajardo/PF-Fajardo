@@ -8,7 +8,7 @@
   <title>Las Plantas de Tere</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.1/font/bootstrap-icons.css">
   <link rel="icon" href="/Img/favicon-32x32.png">
   <meta name="description" content="Plantas exóticas para decorar tus ambientes">
   <meta name="keywords" content="plantas, exóticas, interior, exterior, vivero, macetas, jardín, patio">
@@ -23,100 +23,86 @@
     <div class="descripcion""><strong> Las plantas más exóticas <br> para ambientar tu espacio</div></strong>
     </header>
     <nav>
-      <a href="./pages/exterior.html" class="exterior">Plantas de Exterior</a>
+      <a href=" ./pages/exterior.html" class="exterior">Plantas de Exterior</a>
       <a href="./pages/interior.html" class="interior">Plantas de Interior</a>
       <a href="./pages/macetas.html" class="macetas">Macetas</a>
       <a href="./pages/contacto.html" class="contacto">¿Donde estamos?</a>
-
       </nav>
-      
-
-    <div class="cards-grid">
-      <div class="flip-card">
+      <div class="carousel_horizontal">
+        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="./img/plantitas.jpg" class="d-block w-100" alt="PLANTAS">
+            </div>
+            <div class="carousel-item">
+              <img src="img/exterior2.jpg" class="d-block w-100" alt="JARDÍN">
+            </div>
+            <div class="carousel-item">
+              <img src="img/e1.jpg" class="d-block w-100" alt="FLOR">
+            </div>
+            <div class="carousel-item">
+              <img src="img/e2.jpg" class="d-block w-100" alt="FLOR">
+            </div>
+            <div class="carousel-item">
+              <img src="img/accesorios.jpg" class="d-block w-100" alt="ACCESORIOS">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <div class="cards-grid">
+        <div class="flip-card">
           <div class="flip-card-inner">
-              <div class="flip-card-front" style="background-image: url(./img/outdoor-card.jpg);">
-
-              </div>
-              <div class="flip-card-back">
-                <a href="./pages/exterior.html">Plantas <br> de <br> Exterior</a>
-              </div>
+            <div class="flip-card-front" style="background-image: url(./img/outdoor-card.jpg);">
+            </div>
+            <div class="flip-card-back">
+              <a href="./pages/exterior.html">DECORÁ <br> TU <br> JARDÍN</a>
+            </div>
           </div>
-      </div>
-
-      <div class="flip-card">
+        </div>
+        <div class="flip-card">
           <div class="flip-card-inner">
-              <div class="flip-card-front" style="background-image: url(./img/indoor.jpg);">
-               
-              </div>
-              <div class="flip-card-back">
-                <a href="./pages/interior.html">Plantas <br> de <br> Interior</a>
-                
-                
-              </div>
+            <div class="flip-card-front" style="background-image: url(./img/indoor-card.jpg);">
+            </div>
+            <div class="flip-card-back">
+              <a href="./pages/interior.html">DECORÁ <br> TU <br> HOGAR</a>
+            </div>
           </div>
-      </div>
-  </div>
-
-  <div class="carousel_horizontal">
-    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="./img/Exterior0.jpg" class="d-block w-100" alt="JARDÍN">
         </div>
-        <a href="./pages/exterior.html" class="plantas_exterior">
-          <div class="carousel-item">
-            <img src="img/exterior2.jpg" class="d-block w-100" alt="JARDÍN">
-          </div>
-        </a>
-        <div class="carousel-item">
-          <img src="img/e1.jpg" class="d-block w-100" alt="FLOR">
+      </div>
+      <footer>
+        <div id="redes">
+          <ul>
+            <li>
+              <a href="https://www.instagram.com/lasplantasdetere/">
+                <i class="bi bi-instagram"></i>
+              </a>
+              <a href="https://www.facebook.com/lasplantasdetere">
+                <i class="bi bi-facebook"></i>
+              </a>
+              <a href="#">
+                <i class="bi bi-whatsapp"></i>
+              </a>
+            </li>
+          </ul>
         </div>
-        <div class="carousel-item">
-          <img src="img/e2.jpg" class="d-block w-100" alt="FLOR">
+        <div id="pie">
+          <p>© 2022 Las Plantas de Tere | Powered by FADAX</p>
         </div>
-        <a href="./pages/macetas.html" class="macetas_accesorios">
-          <div class="carousel-item">
-            <img src="img/Accesorios.jpg" class="d-block w-100" alt="ACCESORIOS">
-          </div>
-        </a>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
-        data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
-        data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-  </div>
-</div>
+      </footer>
 
-    <footer>
-      <div id="redes">
-        <ul>
-          <li>
-            <a href="https://www.instagram.com/lasplantasdetere/">
-              <i class="bi bi-instagram"></i>
-            </a>
-            <a href="https://www.facebook.com/lasplantasdetere">
-              <i class="bi bi-facebook"></i>
-            </a>
-            <a href="#">
-              <i class="bi bi-whatsapp"></i>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div id="pie">
-        <p>© 2022 Las Plantas de Tere | Powered by FADAX</p>
-      </div>
-    </footer>
-    
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>

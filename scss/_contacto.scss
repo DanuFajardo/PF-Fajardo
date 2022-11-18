@@ -1,0 +1,132 @@
+@mixin formularios {
+    @include xm-device {
+        width: 95%;
+        font-size: 14px;
+    }
+
+    @include tablet {
+        width: 75%;
+    }
+
+    @include phone {
+        width: 75%;
+    }
+}
+
+.titulo__form {
+    font-size: x-large;
+    text-align: center;
+    background-color: $color-3;
+    color: $color-fondo;
+    padding: $step;
+    width: 100vw;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3%;
+
+    .formulario__cuerpo1 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        padding: $step * 2;
+        border-radius: 10px;
+        font-size: larger;
+        width: 50%;
+        box-shadow: $box-shadow;
+
+        label {
+            align-self: baseline;
+        }
+
+        input {
+            width: 100%;
+        }
+
+        span {
+            align-self: center;
+        }
+
+        @include formularios;
+    }
+}
+
+.formulario__cuerpo2 {
+    @extend .formulario__cuerpo1;
+    align-content: space-between;
+    flex-direction: row;
+    padding: 30px;
+    list-style: none;
+
+    .domicilio_items {
+        display: flex;
+
+        span {
+            text-align: center;
+        }
+
+        input {
+            width: 2vw;
+            height: auto;
+            padding: 0;
+            margin: 10px;
+            vertical-align: auto;
+            position: relative;
+        }
+    }
+}
+
+.boton {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    height: fit-content;
+    font-style: bold;
+    font-family: abel;
+    background-color: $color-gris;
+    border: none;
+    cursor: pointer;
+
+    input {
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 20px;
+        display: block;
+        padding-left: 15px;
+        text-indent: -15px;
+    }
+
+    @include formularios;
+}
+
+.mapa {
+    display: flex;
+    flex-direction: column;
+    background-color: $color-gris;
+    align-items: center;
+
+    iframe {
+        padding: 2%;
+
+        @include desktop {
+            width: 75%;
+        }
+
+        @include phone {
+            width: 75%;
+        }
+
+        @include xm-device {
+            max-width: 95vw;
+        }
+
+        @include tablet {
+            width: 75%;
+        }
+    }
+}
