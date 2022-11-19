@@ -123,18 +123,17 @@ nav a:hover {
   color: whitesmoke;
 }
 nav a:active {
-  color: rgba(227, 227, 227, 0.5);
+  color: #ffc107;
 }
 @media (max-width: 599px) {
   nav a {
-    font-family: abel;
-    font-size: 10px;
+    font-size: 11px;
     text-align: center;
   }
 }
 @media (min-width: 600px) and (max-width: 767px) {
   nav a {
-    font-size: 12px;
+    font-size: 13px;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
@@ -282,21 +281,6 @@ footer #redes ul li a:hover {
     text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
   }
 }
-@keyframes text-pop-up-top {
-  0% {
-    -webkit-transform: translateY(-50px);
-    transform: translateY(-50px);
-    -webkit-transform-origin: 50% 50%;
-    transform-origin: 50% 50%;
-    text-shadow: none;
-  }
-  100% {
-    -webkit-transform: translateY(-15px);
-    transform: translateY(-15px);
-    -webkit-transform-origin: 50% 50%;
-    transform-origin: 50% 50%;
-  }
-}
 .cards-grid {
   display: flex;
   justify-content: center;
@@ -391,7 +375,7 @@ footer #redes ul li a:hover {
 }
 @media (max-width: 599px) {
   .flip-card-back {
-    font-size: medium;
+    font-size: 1.5rem;
   }
 }
 
@@ -636,9 +620,11 @@ form .formulario__cuerpo1 span, form .formulario__cuerpo2 span {
   box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 15px 0px;
   margin-bottom: 15px;
   align-self: center;
+  transition: all 0.3s ease;
 }
 .contenedor_galeria .contenedor_foto .galeria__image:hover, .contenedor_galeria .contenedor_foto .cuerpo_macetas .contenedor_macetas .galeria_macetas:hover, .cuerpo_macetas .contenedor_macetas .contenedor_galeria .contenedor_foto .galeria_macetas:hover {
   opacity: 100%;
+  transform: scale(1.03);
 }
 @media screen and (max-width: 769px) {
   .contenedor_galeria .contenedor_foto .galeria__image, .contenedor_galeria .contenedor_foto .cuerpo_macetas .contenedor_macetas .galeria_macetas, .cuerpo_macetas .contenedor_macetas .contenedor_galeria .contenedor_foto .galeria_macetas {
@@ -667,9 +653,13 @@ form .formulario__cuerpo1 span, form .formulario__cuerpo2 span {
   border-radius: 50%;
   padding: 2%;
   max-width: 100%;
+  opacity: 75%;
+  transition: all 0.3s ease;
 }
 .cuerpo_macetas .contenedor_macetas .galeria_macetas:hover {
-  opacity: 50%;
+  opacity: 100%;
+  transform: scale(1.1);
+  box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 15px 0px;
 }
 @media (max-width: 599px) {
   .cuerpo_macetas .contenedor_macetas .galeria_macetas:hover {
@@ -688,7 +678,8 @@ form .formulario__cuerpo1 span, form .formulario__cuerpo2 span {
 }
 
 .titulo, .titulo--macetas, .titulo--interior {
-  padding-top: 80px;
+  padding-top: 40px;
+  padding-bottom: 40px;
   text-align: center;
   font-size: 70px;
   font-weight: bold;
@@ -698,18 +689,18 @@ form .formulario__cuerpo1 span, form .formulario__cuerpo2 span {
   background-size: cover;
   background-position: center;
   box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 15px 0px;
-  text-shadow: 0px 15px 15px rgba(0, 0, 0, 0.5);
-}
-.titulo .text-pop-up-top, .titulo--macetas .text-pop-up-top, .titulo--interior .text-pop-up-top {
-  -webkit-animation: text-pop-up-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: text-pop-up-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  text-shadow: 0px 10px 15px rgb(0, 0, 0);
 }
 @media (max-width: 599px) {
   .titulo, .titulo--macetas, .titulo--interior {
     padding: 20px;
     color: whitesmoke;
-    font-size: 50px;
+    font-size: 40px;
   }
+}
+.titulo :hover, .titulo--macetas :hover, .titulo--interior :hover {
+  text-shadow: 0px 5px 5px rgb(0, 0, 0);
+  cursor: default;
 }
 
 .titulo--interior {
@@ -738,9 +729,9 @@ form .formulario__cuerpo1 span, form .formulario__cuerpo2 span {
   box-shadow: none;
   color: whitesmoke;
 }
-.titulo--macetas .text-pop-up-top {
-  -webkit-animation: text-pop-up-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: text-pop-up-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+.titulo--macetas :hover {
+  text-shadow: 0px 5px 5px rgb(0, 0, 0);
+  cursor: none;
 }
 
 /*# sourceMappingURL=style.css.map */

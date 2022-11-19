@@ -37,16 +37,16 @@ nav {
         }
 
         &:active {
-            color: $color-gris;
+            color: $color-principal;
         }
 
+
         @include xm-device {
-            font-family: abel;
-            font-size: 10px;
+            font-size: 11px;
             text-align: center;
         }
         @include phone {
-            font-size: 12px;
+            font-size: 13px;
         }
 
         @include tablet {

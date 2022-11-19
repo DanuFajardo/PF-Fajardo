@@ -107,11 +107,13 @@
             box-shadow: $box-shadow-bottom-only;
             margin-bottom: 15px;
             align-self: center;
+            transition: all 0.3s ease;
 
             &:hover {
                 opacity: 100%;
+                transform: scale(1.03);
             }
-
+        
             @media screen and (max-width: 769px) {
                 width: 100%;
                 max-width: 300px;
@@ -141,10 +143,12 @@
             border-radius: 50%;
             padding: 2%;
             max-width: 100%;
-
+            opacity: 75%;
+            transition: all 0.3s ease;
             &:hover {
-                opacity: 50%;
-
+                opacity: 100%;
+                transform: scale(1.1);
+                box-shadow: $box-shadow-bottom-only;
                 @include xm-device {
                     width: 100%;
                 }
