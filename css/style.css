@@ -682,10 +682,6 @@ form .formulario__cuerpo1 span, form .formulario__cuerpo2 span {
     font-size: 40px;
   }
 }
-.titulo :hover, .titulo--macetas :hover, .titulo--interior :hover {
-  text-shadow: 0px 5px 5px rgb(0, 0, 0);
-  cursor: default;
-}
 
 .titulo--interior {
   background-image: url(../img/indoor.jpg);
@@ -712,10 +708,6 @@ form .formulario__cuerpo1 span, form .formulario__cuerpo2 span {
   background-image: url(../img/fondo-2.jpg);
   box-shadow: none;
   color: whitesmoke;
-}
-.titulo--macetas :hover {
-  text-shadow: 0px 5px 5px rgb(0, 0, 0);
-  cursor: none;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -17,16 +17,12 @@
         color: whitesmoke;
         font-size: 40px;
     }
-
-    & :hover {
-        text-shadow: 0px 5px 5px rgb(0 0 0 / 100%);
-        cursor: default;
-    }
 }
 
 .titulo--interior {
     @extend .titulo;
     background-image: url(../img/indoor.jpg);
+
 }
 
 .titulo--iluminacion {
@@ -51,8 +47,4 @@
     box-shadow: none;
     color: $color-fondo;
 
-    & :hover {
-        text-shadow: 0px 5px 5px rgb(0 0 0 / 100%);
-        cursor: none;
-    }
 }
